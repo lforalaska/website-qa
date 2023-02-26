@@ -10,8 +10,7 @@ from flask import Flask
 
 app = Flask(__name__)
 
-
-@app.route("/")
+@app.route("/qa")
 def query_bot():
   parser = argparse.ArgumentParser(description='Ask a question to the notion DB.')
   parser.add_argument('question', type=str, help='The question to ask the notion DB')
