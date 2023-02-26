@@ -24,5 +24,3 @@ result = chain({"question": args.question})
 
 print(f"Answer: {result['answer']}")
 print(f"Sources: {result['sources']}")
-
-  return("Success")
