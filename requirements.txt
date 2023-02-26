@@ -1,4 +1,5 @@
 langchain==0.0.58
+Flask==2.1.0
 openai
 faiss-cpu
 streamlit
