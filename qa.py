@@ -10,7 +10,7 @@ from flask import Flask
 
 app = Flask(__name__)
 
-@app.route("/qa")
+@app.route("/")
 def query_bot():
   parser = argparse.ArgumentParser(description='Ask a question to the notion DB.')
   parser.add_argument('question', type=str, help='The question to ask the notion DB')
@@ -28,6 +28,8 @@ def query_bot():
 
   print(f"Answer: {result['answer']}")
   print(f"Sources: {result['sources']}")
+
+  return("Success")
 
 if __name__ == "__qa__":
     app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
